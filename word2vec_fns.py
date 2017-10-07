@@ -42,7 +42,6 @@ def generate_batch(data, batch_size, skip_window):
         buffer.append(data[data_index])
         data_index = (data_index + 1) % len(data)
  
-    assert batch.shape[0]==batch_size and batch.shape[1]== span-1
     return batch, labels
 
 def get_mean_context_embeds(embeddings, train_inputs):
